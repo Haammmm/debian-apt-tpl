@@ -1,0 +1,13 @@
+# Modernized from /etc/apt/sources.list
+Types: deb deb-src
+URIs: https://mirrors.tuna.tsinghua.edu.cn/debian/
+Suites: stable-backports
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+# Modernized from /etc/apt/sources.list
+Types: deb deb-src
+URIs: https://deb.debian.org/debian/
+Suites: stable-backports
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
