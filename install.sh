@@ -55,6 +55,7 @@ fi
 
 # Ask about backports
 echo
+BACKPORTS_INSTALLED=false
 read -p "Install backports configuration? (Y/n) " -n 1 -r
 echo
 if [[ ! $REPLY =~ ^[Nn]$ ]]; then
@@ -62,6 +63,7 @@ if [[ ! $REPLY =~ ^[Nn]$ ]]; then
         echo -e "${YELLOW}Installing debian-backports.sources...${NC}"
         cp debian-backports.sources /etc/apt/sources.list.d/
         echo -e "${GREEN}✓ debian-backports.sources installed${NC}"
+        BACKPORTS_INSTALLED=true
     else
         echo -e "${RED}Warning: debian-backports.sources not found${NC}"
     fi
@@ -90,9 +92,11 @@ if apt update; then
     echo
     echo "You can now install packages with:"
     echo "  sudo apt install <package-name>"
-    echo
-    echo "For backports packages:"
-    echo "  sudo apt install -t stable-backports <package-name>"
+    if [ "$BACKPORTS_INSTALLED" = true ]; then
+        echo
+        echo "For backports packages:"
+        echo "  sudo apt install -t stable-backports <package-name>"
+    fi
 else
     echo -e "${RED}Error: Failed to update package lists${NC}"
     echo "Please check your network connection and try again"
