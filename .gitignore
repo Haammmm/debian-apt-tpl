@@ -1,0 +1,16 @@
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+
+# Test files
+test/
+*.test
