@@ -6,7 +6,7 @@ Modern APT sources configuration files for Debian stable systems using the DEB82
 
 This repository provides ready-to-use APT sources configuration files for Debian stable that include:
 - **Tsinghua University Mirror** (China, fast access for CN users)
-- **Official Debian Mirror** (Global, fallback source)
+- **Official Debian Mirror** (Worldwide, fallback source)
 - Modern DEB822 format (supported by APT >= 1.1)
 
 ## 📦 What's Included
@@ -85,8 +85,8 @@ apt policy
 
 ### Official Debian Mirror
 - **URL**: https://deb.debian.org/
-- **Coverage**: Global CDN
-- **Purpose**: Fallback and global access
+- **Coverage**: Worldwide CDN
+- **Purpose**: Fallback and worldwide access
 
 ## 🔑 Security
 
