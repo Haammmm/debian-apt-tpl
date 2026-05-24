@@ -16,12 +16,9 @@
 - `stable` - Debian 稳定版主仓库
 - `stable-updates` - 稳定版重要更新
 - `stable-security` - 稳定版安全更新
+- `stable-backports` - 移植到稳定版的新版本软件包
 
 所有源都包含：`main`、`contrib`、`non-free` 和 `non-free-firmware` 组件。
-
-### `debian-backports.sources`
-Backports 仓库配置：
-- `stable-backports` - 移植到稳定版的新版本软件包
 
 ## 🚀 安装方法
 
@@ -39,11 +36,7 @@ Backports 仓库配置：
 
 2. **复制配置文件**：
    ```bash
-   # 主仓库配置
    sudo cp debian.sources /etc/apt/sources.list.d/
-
-   # Backports 配置（可选）
-   sudo cp debian-backports.sources /etc/apt/sources.list.d/
    ```
 
 3. **可选：禁用旧的 sources.list**：
@@ -108,10 +101,9 @@ apt policy
 
 ### 禁用 Backports
 如果不需要 backports：
-```bash
-sudo rm /etc/apt/sources.list.d/debian-backports.sources
-sudo apt update
-```
+1. 编辑文件：`sudo nano /etc/apt/sources.list.d/debian.sources`
+2. 从 `Suites` 行中移除 `stable-backports`
+3. 运行 `sudo apt update`
 
 ## 📝 文件格式
 

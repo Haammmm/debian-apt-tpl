@@ -16,16 +16,14 @@ sudo ./install.sh
 ## Example 2: Manual Installation
 
 ```bash
-# Download the files
+# Download the file
 wget https://raw.githubusercontent.com/Haammmm/debian-apt-tpl/main/debian.sources
-wget https://raw.githubusercontent.com/Haammmm/debian-apt-tpl/main/debian-backports.sources
 
 # Backup existing configuration
 sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
 
 # Install the configuration
 sudo cp debian.sources /etc/apt/sources.list.d/
-sudo cp debian-backports.sources /etc/apt/sources.list.d/
 
 # Update
 sudo apt update
