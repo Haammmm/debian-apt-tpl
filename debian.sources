@@ -1,13 +1,11 @@
 # Tsinghua University Mirror (Primary)
-Types: deb
-# Types: deb deb-src
+Types: deb deb-src
 URIs: https://mirrors.tuna.tsinghua.edu.cn/debian/
 Suites: stable stable-updates stable-backports
 Components: main contrib non-free non-free-firmware
 Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
-Types: deb
-# Types: deb deb-src
+Types: deb deb-src
 URIs: https://mirrors.tuna.tsinghua.edu.cn/debian-security/
 Suites: stable-security
 Components: main contrib non-free non-free-firmware
@@ -16,15 +14,13 @@ Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 # ---------------------------------------------------------
 
 # Official Debian Mirror (Fallback)
-Types: deb
-# Types: deb deb-src
+Types: deb deb-src
 URIs: https://deb.debian.org/debian/
 Suites: stable stable-updates stable-backports
 Components: main contrib non-free non-free-firmware
 Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
 
-Types: deb
-# Types: deb deb-src
+Types: deb deb-src
 URIs: https://deb.debian.org/debian-security/
 Suites: stable-security
 Components: main contrib non-free non-free-firmware
