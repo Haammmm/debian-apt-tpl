@@ -16,12 +16,9 @@ Main APT sources configuration including:
 - `stable` - Main Debian stable release
 - `stable-updates` - Important updates for stable
 - `stable-security` - Security updates for stable
+- `stable-backports` - Newer package versions backported to stable
 
 All sources include: `main`, `contrib`, `non-free`, and `non-free-firmware` components.
-
-### `debian-backports.sources`
-Backports repository configuration:
-- `stable-backports` - Newer package versions backported to stable
 
 ## 🚀 Installation
 
@@ -37,13 +34,9 @@ Backports repository configuration:
    sudo cp /etc/apt/sources.list /etc/apt/sources.list.backup
    ```
 
-2. **Copy the configuration files**:
+2. **Copy the configuration file**:
    ```bash
-   # For main repositories
    sudo cp debian.sources /etc/apt/sources.list.d/
-
-   # For backports (optional)
-   sudo cp debian-backports.sources /etc/apt/sources.list.d/
    ```
 
 3. **Optional: Disable old sources.list**:
@@ -107,11 +100,10 @@ If you don't need source packages (`deb-src`), you can:
 3. Run `sudo apt update`
 
 ### Disabling Backports
-If you don't need backports:
-```bash
-sudo rm /etc/apt/sources.list.d/debian-backports.sources
-sudo apt update
-```
+If you don't need backports, you can:
+1. Edit the file: `sudo nano /etc/apt/sources.list.d/debian.sources`
+2. Remove `stable-backports` from the `Suites` lines
+3. Run `sudo apt update`
 
 ## 📝 File Format
 
